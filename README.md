@@ -32,10 +32,10 @@ změním na
 
 ```
 pick 0084050 add comment model
-f 8601b30 fix: some bug in comment model # squash but leave previous commit message
+f    8601b30 fix: some bug in comment model # squash but leave previous commit message
 pick 6d78bbf tests
 pick b00ae30 update post controller
-f 527c74d oops forgot update phpDoc # squash but leave previous commit message
+f    527c74d oops forgot update phpDoc # squash but leave previous commit message
 pick a1810a9 view for comments
 ```
 
