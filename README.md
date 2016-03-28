@@ -4,10 +4,11 @@ Práce na feature
 ---
 Před začátkem práce si pullnu čerstvý master a novou větev postavím nad ním.
 
-`
+```
 git checkout master
 git pull origin master
-`
+```
+
 Nové větve by měli obsahovat mé iniciály a číslo tasku
 
 `git checkout -b pr-ZO-4444-add-commenting`
@@ -18,32 +19,32 @@ Snažím se commitovat co nejčastěji. Na konci dne/práce použiju squashing p
 
 Dostanu např.
 
-`
+```
 pick 0084050 add comment model
 pick b00ae30 update post controller
 pick 527c74d oops forgot update phpDoc
 pick 6d78bbf tests
 pick 8601b30 fix: some bug in comment model
 pick a1810a9 view for comments
-`
+```
 
 změním na
 
-`
+```
 pick 0084050 add comment model
 f 8601b30 fix: some bug in comment model # squash but leave previous commit message
 pick 6d78bbf tests
 pick b00ae30 update post controller
 f 527c74d oops forgot update phpDoc # squash but leave previous commit message
 pick a1810a9 view for comments
-`
+```
 
 Po dokončení a před pushem na remote ještě udělám rebase na master (pro případm že se v průběhu mého vývoje změnil)
 
-`
+```
 git pull origin master
 git rebase origin/master
-`
+```
 
 Spustím testy a zelenou větev můžu pushnout
 
@@ -62,10 +63,10 @@ Testování
 ---
 Pokusím se o rebase nad aktuální master
 
-`
+```
 git pull origin master
 git rebase origin/master
-`
+```
 
 Pokud vše proběhlo bez konfliktů, spustím testy. V opačném případě poprosím o rebase autora větve a poté spustím testy.
 
