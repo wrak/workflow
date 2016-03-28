@@ -13,7 +13,7 @@ Nové větve by měli obsahovat mé iniciály a číslo tasku
 
 `git checkout -b pr-ZO-4444-add-commenting`
 
-Snažím se commitovat co nejčastěji. Na konci dne/práce použiju squashing přes rebase interactive, tím získám co nejatomičtější commity. **Atomický commit převede aplikaci z jednoho _funkčního_ stavu do druhého.** Při CR není pak nutné dělat review celého balíku změn najednou a při review jednotlivých commitů si můžz být jistý, že kód, který jsem zkontroloval, se v dalších commitech nezmění. 
+Snažím se commitovat co nejčastěji a pravidelně rebasuji na čerstvý master. Na konci dne/práce použiju squashing přes rebase interactive, tím získám co nejatomičtější commity. **Atomický commit převede aplikaci z jednoho _funkčního_ stavu do druhého.** Při CR není pak nutné dělat review celého balíku změn najednou a při review jednotlivých commitů si můžu být jistý, že kód, který jsem zkontroloval, se v dalších commitech nezmění. 
 
 `git rebase -i origin/master`
 
@@ -39,7 +39,7 @@ f    527c74d oops forgot update phpDoc # squash but leave previous commit messag
 pick a1810a9 view for comments
 ```
 
-Po dokončení a před pushem na remote ještě udělám rebase na master (pro případm že se v průběhu mého vývoje změnil)
+Po dokončení a před pushem na remote ještě udělám rebase na master (pro případ, že se v průběhu mého vývoje změnil)
 
 ```
 git pull origin master
@@ -56,7 +56,7 @@ Pro epic feature založíme speciální větev, kterou pravidelně rebasujeme na
 
 BC Breaks
 ---
-Změna, která by má za následek BC break pro ostatní větve, by měla jít okamžitě do masteru, aby ostatní programátoři mohli rebasnout na novou verzi.
+Pro změnu, která má za následek BC break pro ostatní verze aplikace, se vytvoří nová issue a mělo by se k ní přistupovat jako k hot fixu, tedy okamžitě otestovat a nasadit. Ostatní programátoři tak mají možnost rebasnout na novou verzi.
 Typicky se jedná o změnu schématu/API, kdy starší verze aplikace nebudou reflektovat nový stav schématu/API.
 
 Testování
