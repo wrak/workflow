@@ -13,7 +13,7 @@ Nové větve by měli obsahovat mé iniciály a číslo tasku
 
 `git checkout -b pr-ZO-4444-add-commenting`
 
-Snažím se commitovat co nejčastěji. Na konci dne/práce použiju squashing přes rebase interactive, tím získám co nejatomičtější commity. *Atomický commit převede aplikaci z jednoho funkčního stavu do druhého.* Při CR není pak nutné dělat review celého balíku změn najednou a při review jednotlivých commitů si můžz být jistý, že kód, který jsem zkontroloval, se v dalších commitech nezmění. 
+Snažím se commitovat co nejčastěji. Na konci dne/práce použiju squashing přes rebase interactive, tím získám co nejatomičtější commity. **Atomický commit převede aplikaci z jednoho _funkčního_ stavu do druhého.** Při CR není pak nutné dělat review celého balíku změn najednou a při review jednotlivých commitů si můžz být jistý, že kód, který jsem zkontroloval, se v dalších commitech nezmění. 
 
 `git rebase -i origin/master`
 
@@ -52,7 +52,7 @@ Spustím testy a zelenou větev můžu pushnout
 
 Epic feature
 ---
-Pro epic feature založíme speciální větev, kterou pravidelně rebasujeme na master. Práce na jednotlivých feature bude stejná jako nad masterem (viz.: *Práce na feature*) s tím rozdílem, že budu pracovat nad epic větví. Po dokončení feature (a rebase nad epic) rovnou mergujeme do epic větve
+Pro epic feature založíme speciální větev, kterou pravidelně rebasujeme na master. Práce na jednotlivých feature bude stejná jako nad masterem (viz.: **Práce na feature**) s tím rozdílem, že budu pracovat nad epic větví. Po dokončení feature (a rebase nad epic) rovnou mergujeme do epic větve
 
 BC Breaks
 ---
